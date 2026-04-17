@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class TrainApp {
+    public static void main(String[] args) {
+
+        System.out.println("=== Train Consist Management App ===");
+
+        List<String> bogies = new ArrayList<>();
+
+        String key = "B1";
+
+        if (bogies.isEmpty()) {
+            throw new IllegalStateException("Cannot perform search: Train has no bogies");
+        }
+
+        for (String b : bogies) {
+            if (b.equals(key)) {
+                System.out.println("Bogie Found: " + b);
+                return;
+            }
+        }
+
+        System.out.println("Bogie not found");
+    }
+}
